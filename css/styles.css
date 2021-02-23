@@ -21,6 +21,7 @@
     left: 0;
     top: 0;
     background: var(--main-color);
+    z-index: 100;
 }
 
 .sidebar-brand {
@@ -65,9 +66,8 @@
 }
 
 .flecha {
-    margin-left: 1rem;
-    font-size: 1.2rem;
-    padding: 0;
+    padding-left: 10px;
+    font-size: 1rem;
 }
 
 .main-content {
@@ -79,6 +79,11 @@ header {
     justify-content: space-between;
     padding: 1rem 1.5rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    position: fixed;
+    left: 245px;
+    width: calc(100% - 245px);
+    top: 0;
+    z-index: 100;
 }
 
 header h2 {
@@ -126,4 +131,45 @@ header label span {
 .user-wrapper small {
     display: inline-block;
     color: var(--text-grey);
+}
+
+main {
+    margin-top: 85px;
+    padding: 2rem 1.5rem;
+    background: #f1f5f9;
+    min-height: calc(100vh - 90px);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1rem;
+}
+
+.card-single {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 2px;
+}
+
+.card-single div:last-child span {
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.card-single div:first-child span {
+    color: var(--text-grey);
+}
+
+.card-single:last-child {
+    background: var(--main-color);
+}
+
+.card-single:last-child h1,
+.card-single:last-child div:first-child span,
+.card-single:last-child div:last-child span {
+    color: #fff;
 }
