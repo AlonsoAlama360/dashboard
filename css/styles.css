@@ -60,6 +60,15 @@
     border-radius: 30px 0px 0px 30px;
 }
 
+#nav-toggle:checked+.sidebar {
+    width: 70px;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand h1 span:last-child,
+#nav-toggle:checked+.sidebar li a span:last-child {
+    display: none;
+}
+
 .sidebar-menu a span i:first-child {
     font-size: 1.2rem;
     padding-right: 1rem;
@@ -84,6 +93,11 @@ header {
     width: calc(100% - 245px);
     top: 0;
     z-index: 100;
+    background: #fff;
+}
+
+#nav-toggle {
+    display: none;
 }
 
 header h2 {
@@ -174,12 +188,123 @@ main {
     color: #fff;
 }
 
+
+/* SOLICITUDES RECIENTES */
+
 .recent-grid {
     margin-top: 3.5rem;
     display: grid;
-    grid-template-columns: 70% auto;
+    grid-gap: 2rem;
+    grid-template-columns: 65% auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 5px;
+}
+
+.card-header,
+.card-body {
+    padding: 1rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header button {
+    background: var(--main-color);
+    border-radius: 10px;
+    color: #fff;
+    font-size: .8rem;
+    padding: .5rem 1rem;
+    border: 1px solid var(--main-color);
+    outline: none;
+}
+
+.card-header button span {
+    left: 5px;
 }
 
 table {
     border-collapse: collapse;
+}
+
+thead tr {
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+thead td {
+    font-weight: 700;
+}
+
+td {
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    color: #222;
+}
+
+td .status {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+tr td:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.status.success {
+    background: green;
+}
+
+.status.danger {
+    background: red;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.customer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem .7rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.info img {
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.info h4 {
+    font-size: .8rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.info small {
+    font-weight: 600;
+    color: var(--text-grey);
+}
+
+.contact span {
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: var(--main-color);
 }

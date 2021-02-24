@@ -11,40 +11,41 @@
 </head>
 
 <body>
+    <input type="checkbox" id="nav-toggle">
     <div class="sidebar">
         <div class="sidebar-brand">
             <h1>
-                <span><i class="fab fa-reddit-alien"></i>Intralink</span>
+                <span><i class="fab fa-reddit-alien"></i></span><span>Intralink</span>
             </h1>
         </div>
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="#" class="active"><span><i class="fas fa-home"></i>Inicio</span></a>
+                    <a href="#" class="active"><span><i class="fas fa-home"></i></span><span>Inicio</span></a>
                 </li>
                 <li>
-                    <a href="#"><span><i class="fas fa-user"></i>Usuarios</span></a>
+                    <a href="#"><span><i class="fas fa-user"></i></span><span>Usuarios</span></a>
                 </li>
                 <li>
-                    <a href="#"><span><i class="fab fa-product-hunt"></i>Productos</span></a>
+                    <a href="#"><span><i class="fab fa-product-hunt"></i></span><span>Productos</span></a>
                 </li>
                 <li>
-                    <a href="#"><span><i class="fas fa-tools"></i>Servicios</span></a>
+                    <a href="#"><span><i class="fas fa-tools"></i></span><span>Servicios</span></a>
                 </li>
                 <li>
-                    <a href="#"><span><i class="fas fa-users"></i>Clientes</span></a>
+                    <a href="#"><span><i class="fas fa-users"></i></span><span>Clientes</span></a>
                 </li>
                 <li>
                     <a href="#">
-                        <span><i class="fas fa-list-ul"></i>Ventas</span>
+                        <span><i class="fas fa-list-ul"></i></span><span>Ventas</span>
                         <i class="fa fa-angle-left flecha"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#"><span><i class="fas fa-clipboard-list"></i>Solicitudes</span></a>
+                    <a href="#"><span><i class="fas fa-clipboard-list"></i></span><span>Solicitudes</span></a>
                 </li>
                 <li>
-                    <a href="#"><span><i class="fas fa-chart-pie"></i>Reportes</span></a>
+                    <a href="#"><span><i class="fas fa-chart-pie"></i></span><span>Reportes</span></a>
                 </li>
             </ul>
         </div>
@@ -52,7 +53,7 @@
     <div class="main-content">
         <header>
             <h2>
-                <label for="">
+                <label for="nav-toggle">
                     <span><i class="fas fa-bars"></i></span>
                 </label> Dashboard
             </h2>
@@ -117,57 +118,76 @@
                             </button>
                         </div>
                         <div class="card-body">
-                            <table width="100%">
-                                <thead>
-                                    <tr>
-                                        <td>Servicio</td>
-                                        <td>Dirección</td>
-                                        <td>Estado</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Internet</td>
-                                        <td>La Peñita</td>
-                                        <td><span class="status">Aceptada</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Colan</td>
-                                        <td>Paita</td>
-                                        <td><span class="status">Rechazada</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Internet</td>
-                                        <td>Lobitos</td>
-                                        <td><span class="status">Aceptada</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Internet</td>
-                                        <td>Sechura</td>
-                                        <td><span class="status">Aceptada</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Internet</td>
-                                        <td>Parachique</td>
-                                        <td><span class="status">Aceptada</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Internet</td>
-                                        <td>Paita</td>
-                                        <td><span class="status">Aceptada</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Internet</td>
-                                        <td>Colan</td>
-                                        <td><span class="status">Aceptada</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Internet</td>
-                                        <td>La Islía</td>
-                                        <td><span class="status">Rechazada</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td>Servicio</td>
+                                            <td>Dirección</td>
+                                            <td>Estado</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Internet</td>
+                                            <td>Pedregal</td>
+                                            <td>
+                                                <span class="status success"></span> Aceptada
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Internet</td>
+                                            <td>Pedregal</td>
+                                            <td>
+                                                <span class="status danger"></span> Rechazada
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Internet</td>
+                                            <td>Pedregal</td>
+                                            <td>
+                                                <span class="status success"></span> Aceptada
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Internet</td>
+                                            <td>Pedregal</td>
+                                            <td>
+                                                <span class="status success"></span> Aceptada
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Internet</td>
+                                            <td>Pedregal</td>
+                                            <td>
+                                                <span class="status success"></span> Aceptada
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Internet</td>
+                                            <td>Pedregal</td>
+                                            <td>
+                                                <span class="status success"></span> Aceptada
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Internet</td>
+                                            <td>Pedregal</td>
+                                            <td>
+                                                <span class="status danger"></span> Rechazada
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Internet</td>
+                                            <td>Pedregal</td>
+                                            <td>
+                                                <span class="status success"></span> Aceptada
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
                         </div>
                     </div>
                 </div>
