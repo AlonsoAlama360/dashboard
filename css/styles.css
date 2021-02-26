@@ -518,6 +518,10 @@
         .cards {
             grid-template-columns: repeat(2, 1fr);
         }
+        .map-chart {
+            grid: template columns 100%;
+            ;
+        }
         .recent-grid {
             grid-template-columns: 100%;
         }
@@ -583,6 +587,29 @@
     
     @media only screen and (max-width:600px) {
         .cards {
+            grid-template-columns: 100%;
+        }
+    }
+    
+    #map {
+        /* position: absolute; */
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 437px;
+        border: 1px solid red;
+    }
+    
+    .map-chart {
+        margin-top: 3.5rem;
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: 50% 50%;
+        overflow-x: hidden;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .map-chart {
             grid-template-columns: 100%;
         }
     }
