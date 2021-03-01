@@ -623,7 +623,7 @@
     }
     
     #myChart {
-        margin: auto;
+        padding-top: 50px;
     }
     
     .chart-ventas {
@@ -641,6 +641,9 @@
         .chart-v {
             height: auto;
             margin: auto;
+        }
+        #myChart {
+            padding-top: 0px;
         }
         .chart-line {
             height: auto;
