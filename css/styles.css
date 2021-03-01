@@ -290,6 +290,16 @@
         outline: none;
     }
     
+    button {
+        background: var(--main-color);
+        border-radius: 10px;
+        color: #fff;
+        font-size: .8rem;
+        padding: .5rem 1rem;
+        border: 1px solid var(--main-color);
+        outline: none;
+    }
+    
     .card-header button span {
         left: 5px;
     }
@@ -330,8 +340,18 @@
         background: green;
     }
     
+    .success {
+        background: green;
+        border: none;
+    }
+    
     .status.danger {
         background: red;
+    }
+    
+    .danger {
+        background: red;
+        border: none;
     }
     
     .table-responsive {
@@ -649,4 +669,18 @@
             height: auto;
             margin: auto;
         }
+    }
+    
+    .editar {
+        background: orange;
+        border: none;
+    }
+    
+    .delete {
+        background: rgb(236, 17, 17);
+        border: none;
+    }
+    
+    .box-header {
+        margin: 20px 0px;
     }
