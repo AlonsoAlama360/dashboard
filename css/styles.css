@@ -341,7 +341,7 @@
     
     .customers {
         height: 437px;
-        overflow-y: auto;
+        overflow-x: auto;
     }
     
     .customers::-webkit-scrollbar {
@@ -596,20 +596,39 @@
         top: 0;
         bottom: 0;
         width: 100%;
-        height: 437px;
-        border: 1px solid red;
+        height: 350px;
     }
     
     .map-chart {
         margin-top: 3.5rem;
         display: grid;
         grid-gap: 2rem;
-        grid-template-columns: 50% 50%;
-        overflow-x: hidden;
+        grid-template-columns: 50% 49%;
+        /* overflow-x: hidden; */
     }
     
     @media only screen and (max-width: 768px) {
         .map-chart {
             grid-template-columns: 100%;
         }
+    }
+    
+    canvas {
+        bottom: 0;
+    }
+    
+    #myChart {
+        height: 350px !important;
+    }
+    
+    .chart-ventas {
+        margin-top: 3.5rem;
+        display: grid;
+        grid-template-columns: 100%;
+        /* overflow-x: hidden; */
+    }
+    
+    #myLineChart {
+        height: 450px !important;
+        border: 1px solid red;
     }
