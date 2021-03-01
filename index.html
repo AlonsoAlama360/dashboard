@@ -28,7 +28,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="usuarios.html">
                         <span><i class="fas fa-user"></i></span><span>Usuarios</span>
                     </a>
                 </li>
@@ -403,7 +403,9 @@
                             </button>
                         </div>
                         <div class="card-body">
-                            <canvas id="myLineChart"></canvas>
+                            <div class="chart-line">
+                                <canvas id="myLineChart"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -475,10 +477,10 @@
                 }]
             },
             options: {
-                title: {
-                    display: true,
-                    text: 'Grafica de mis ventas'
-                }
+                // title: {
+                //     display: true,
+                //     text: 'Grafica de mis ventas'
+                // }
             }
         });
     </script>

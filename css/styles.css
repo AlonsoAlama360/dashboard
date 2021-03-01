@@ -617,8 +617,13 @@
         bottom: 0;
     }
     
+    .chart-v {
+        height: 350px;
+        margin: auto;
+    }
+    
     #myChart {
-        height: 350px !important;
+        margin: auto;
     }
     
     .chart-ventas {
@@ -628,6 +633,17 @@
         /* overflow-x: hidden; */
     }
     
-    #myLineChart {
-        height: 450px !important;
+    .chart-line {
+        height: auto;
+    }
+    
+    @media only screen and (max-width:360px) {
+        .chart-v {
+            height: auto;
+            margin: auto;
+        }
+        .chart-line {
+            height: auto;
+            margin: auto;
+        }
     }
