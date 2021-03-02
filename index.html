@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <!-- Mapbox -->
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- DataTable -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
-
     <link rel="stylesheet" href="plugins/datatables.net-bs/css/responsive.bootstrap.min.css">
-
+    <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <title>Intralink</title>
 </head>
@@ -433,76 +434,8 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
     <script src="plugins/datatables.net-bs/js/dataTables.responsive.min.js"></script>
     <script src="plugins/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script>
-        // map
-        mapboxgl.accessToken = 'pk.eyJ1IjoiYWxvbnNvYWxhbWEiLCJhIjoiY2tsa2h4eGd4MDFqZjJvbnp6MndtNjFjMyJ9.C016LuwWfitjB2p6PCuQAQ'; // replace this with your access token
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/alonsoalama/cklkjcoi60kxa17k83whvtvge', // replace this with your style URL
-            center: [-80.84850048649241, -5.139506344893334],
-            zoom: 8
-        });
-        // code from the next step will go here
-        map.on('click', function(e) {
-            var features = map.queryRenderedFeatures(e.point, {
-                layers: ['antenas'] // replace this with the name of the layer
-            });
-
-            if (!features.length) {
-                return;
-            }
-
-            var feature = features[0];
-
-            var popup = new mapboxgl.Popup({
-                    offset: [0, -15]
-                })
-                .setLngLat(feature.geometry.coordinates)
-                .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
-                .addTo(map);
-        });
-        // char antenas-clientes 
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var chart = new Chart(ctx, {
-            // The type of chart we want to create
-            type: 'line',
-
-            // The data for our dataset
-            data: {
-                labels: ['Piura', 'Colán', 'Sechura', 'La Unión', 'Paita'],
-                datasets: [{
-                    label: 'Mis clientes',
-                    backgroundColor: 'rgb(255, 99, 132)',
-                    borderColor: 'rgb(255, 99, 132)',
-                    data: [50, 25, 72, 30, 100]
-                }]
-            },
-
-            // Configuration options go here
-            options: {}
-        });
-        // chart ventas
-        new Chart(document.getElementById("myLineChart"), {
-            type: 'line',
-            data: {
-                labels: [2020.08, 2020.09, 2020.10, 2020.11, 2020.12, 2021.01, 2021.02],
-                datasets: [{
-                    data: [1500, 1600, 1700, 1750, 1800, 1850, 1900],
-                    label: "Mis ventas",
-                    borderColor: "#3e95cd",
-                    fill: false
-                }]
-            },
-            options: {
-                // title: {
-                //     display: true,
-                //     text: 'Grafica de mis ventas'
-                // }
-            }
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
