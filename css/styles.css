@@ -490,7 +490,7 @@
             .sidebar .sidebar-brand h2 span:last-child,
             .sidebar li a span:last-child,
             .sidebar .collapse a span:nth-child(2),
-            .sidebar .collapse a i {
+            .sidebar .collapse a .flecha {
                 display: none;
             }
             /* .sidebar .collap .collap_a,
