@@ -23,6 +23,17 @@
             background: var(--main-color);
             z-index: 100;
             transition: width 500ms;
+            overflow-y: auto;
+        }
+        
+        .sidebar::-webkit-scrollbar {
+            width: 3px;
+            background: transparent;
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb {
+            background: rgb(5, 73, 107);
+            border-radius: 10px;
         }
         
         .sidebar-brand {
@@ -53,10 +64,11 @@
             font-size: 1rem;
         }
         
-        .sidebar-menu a.active {
+        .sidebar-menu a.active,
+        .sidebar-menu a.active i {
             background: #fff;
-            padding-top: .7rem;
-            padding-bottom: .7rem;
+            padding-top: .35rem;
+            padding-bottom: .35rem;
             color: var(--main-color);
             border-radius: 30px 0px 0px 30px;
         }
@@ -65,10 +77,53 @@
             font-size: 1.2rem;
             padding-right: 1rem;
         }
+        /*===== COLLAPSE =====*/
+        
+        .collap {
+            position: relative;
+        }
         
         .flecha {
-            padding-left: 10px;
+            padding: 0px 0px 0px 0px;
             font-size: 1rem;
+            color: #fff;
+            position: absolute;
+            margin: 0px 0px 0px 30px;
+        }
+        /* .flecha {
+                transform: rotate(180deg);
+            } */
+        
+        .collapse__link {
+            justify-self: flex-end;
+            transition: .5s;
+        }
+        
+        .collapse__menu {
+            display: none;
+            padding: 1px 0px 0px 0px;
+            margin: 10px 0px 0px 20px;
+        }
+        
+        .collapse__sublink {
+            color: #B6CEFC !important;
+            font-size: .7rem;
+            text-align: justify;
+        }
+        
+        .collapse__sublink:hover {
+            color: #fff !important;
+        }
+        /*Show collapse*/
+        
+        .showCollapse {
+            display: block;
+            align-items: center;
+        }
+        /*Rotate icon*/
+        
+        .rotate {
+            transform: rotate(180deg);
         }
         
         .main-content {
@@ -341,8 +396,8 @@
         }
         
         .success {
-            background: green;
-            border: none;
+            background-color: #449d44;
+            border-color: #398439;
         }
         
         .status.danger {
@@ -350,8 +405,8 @@
         }
         
         .danger {
-            background: red;
-            border: none;
+            background-color: #dd4b39;
+            border-color: #d73925;
         }
         
         .table-responsive {
@@ -433,9 +488,13 @@
                 padding-left: 0rem;
             }
             .sidebar .sidebar-brand h2 span:last-child,
-            .sidebar li a span:last-child {
+            .sidebar li a span:last-child,
+            .sidebar .collapse a span:nth-child(2),
+            .sidebar .collapse a i {
                 display: none;
             }
+            /* .sidebar .collap .collap_a,
+                .sidebar .flecha  */
             .main-content {
                 margin-left: 70px;
             }
@@ -456,7 +515,9 @@
                 padding-left: 1rem;
             }
             #nav-toggle:checked+.sidebar .sidebar-brand h2 span:last-child,
-            #nav-toggle:checked+.sidebar li a span:last-child {
+            #nav-toggle:checked+.sidebar li a span:last-child,
+            #nav-toggle:checked+.sidebar .collapse a span:nth-child(2),
+            #nav-toggle:checked+.sidebar .collapse a i {
                 display: inline;
             }
             #nav-toggle:checked~.main-content {
@@ -672,13 +733,13 @@
         }
         
         .editar {
-            background: orange;
-            border: none;
+            background-color: #ec971f;
+            border-color: #d58512;
         }
         
         .delete {
-            background: rgb(236, 17, 17);
-            border: none;
+            background-color: #dd4b39;
+            border-color: #d73925;
         }
         
         .box-header {

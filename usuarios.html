@@ -28,12 +28,12 @@
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="index.html" class="menu_link ">
+                    <a href="index.html" class="menu_link active">
                         <span><i class="fas fa-home"></i></span><span>Inicio</span>
                     </a>
                 </li>
                 <li>
-                    <a href="usuarios.html" class="menu_link active">
+                    <a href="usuarios.html" class="menu_link ">
                         <span><i class="fas fa-user"></i></span><span>Usuarios</span>
                     </a>
                 </li>
@@ -52,11 +52,17 @@
                         <span><i class="fas fa-users"></i></span><span>Clientes</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="menu_link ">
-                        <span><i class="fas fa-list-ul"></i></span><span>Ventas</span>
-                        <!-- <i class="fa fa-angle-left flecha"></i> -->
+                <li class="collapse">
+                    <a href="#" class="menu_link collap">
+                        <span class="collap"><i class="fas fa-list-ul"></i></span><span>Ventas</span>
+                        <i class="fas fa-angle-down flecha collapse__link"></i>
                     </a>
+
+                    <ul class="collapse__menu">
+                        <a href="#" class="collapse__sublink">Crear Venta</a>
+                        <a href="#" class="collapse__sublink">Administrar Venta</a>
+                        <a href="#" class="collapse__sublink">Reporte de venta</a>
+                    </ul>
                 </li>
                 <li>
                     <a href="#" class="menu_link ">
@@ -106,8 +112,8 @@
                     <small>Inicio</small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Inicio</a></li>
-                    <li class="active">Tablero</li>
+                    <li><a href="index.html"><i class="fas fa-tachometer-alt"></i>Inicio</a></li>
+                    <li class="active">Usuarios</li>
                 </ol>
             </div>
 
@@ -332,6 +338,8 @@
     <script src="plugins/datatables.net-bs/js/dataTables.responsive.min.js"></script>
     <script src="plugins/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- ===== IONICONS ===== -->
+    <!-- <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script> -->
     <script src="js/main.js"></script>
 </body>
 
