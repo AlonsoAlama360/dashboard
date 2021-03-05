@@ -743,3 +743,152 @@
         .box-header {
             margin: 20px 0px;
         }
+        /* MODAL */
+        
+        .modal {
+            display: none;
+            margin: 5% 25%;
+            border: 1px solid rgba(128, 128, 128, 0.185);
+            width: 50%;
+            background: #fff;
+            top: 0;
+            position: absolute;
+            z-index: 200;
+        }
+        
+        .modal-header {
+            background: #011455;
+            color: #fff;
+            font-size: 18px;
+            /* font-family: sans-serif; */
+            display: flex;
+            justify-content: space-between;
+            top: 0;
+            bottom: 0;
+        }
+        
+        .modal-header h4 {
+            margin: auto 10px;
+            text-align: center;
+        }
+        
+        .modal-header button {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 20px;
+            padding: 10px;
+            color: rgba(255, 255, 255, 0.548);
+        }
+        
+        .modal-header button:hover {
+            color: #fff;
+        }
+        
+        .modal-body {
+            top: 0;
+            background: #fff;
+        }
+        
+        .input-group {
+            margin: 10px 20px;
+            border: 1px solid rgba(128, 128, 128, 0.404);
+            height: auto;
+        }
+        
+        .input-span,
+        .input-text {
+            padding: 15px 10px;
+        }
+        
+        .input-span {
+            padding: 14px 10px;
+            border-right: 1px solid rgba(128, 128, 128, 0.404);
+        }
+        
+        .modal input[type=text],
+        .modal input[type=password],
+        .modal select {
+            width: calc(100% - 62px);
+            border: none;
+            outline: none;
+        }
+        
+        .modal select {
+            color: gray;
+        }
+        
+        .modal select option {
+            background: #fff;
+            color: gray;
+            font-size: 15px;
+        }
+        
+        .input-file {
+            margin: 10px 20px;
+            /* border: 1px solid gray; */
+            height: auto;
+        }
+        
+        .panel {
+            padding: 10px 0px 2px 0px;
+            font-size: 12px;
+            color: gray;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.13);
+        }
+        
+        .modal input[type=file] {
+            padding: 10px 0px 0px 0px;
+            font-size: 14px;
+            width: 100%;
+        }
+        
+        .modal .help-block {
+            top: 0;
+            padding: 0px;
+            font-size: 12px;
+            color: grey;
+        }
+        
+        .modal .img-user {
+            padding: 4px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .modal .modal-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        
+        .modal .modal-footer button[type=button],
+        .modal .modal-footer button[type=submit] {
+            padding: 7px 10px;
+            border-radius: 4px;
+            outline: none;
+        }
+        
+        .modal .modal-footer .button-g {
+            background: #011455;
+            color: #fff;
+            font-size: .8rem;
+            outline: none;
+            border-radius: 4px;
+        }
+        
+        @media only screen and (max-width:500px) {
+            .modal {
+                width: 90%;
+                margin: 25% 10%;
+            }
+        }
+        
+        @media only screen and (max-width: 1000px) {
+            .modal {
+                width: 80%;
+                margin: 20% 10%;
+            }
+        }
