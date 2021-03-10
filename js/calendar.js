@@ -42,6 +42,15 @@ document.addEventListener('DOMContentLoaded', function() {
             start: '2021-03-20',
             end: '2021-03-20',
             color: 'rgb(255, 7, 81)'
+        }, {
+            title: 'Piura',
+            start: '2021-04-03',
+            end: '2021-04-03'
+        }, {
+            title: 'Catacaos',
+            start: '2021-04-10',
+            end: '2021-04-10',
+            color: 'rgb(255, 7, 81)'
         }]
     });
 
