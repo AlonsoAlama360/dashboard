@@ -933,6 +933,9 @@
     }
     
     @media only screen and (max-width:500px) {
+        #calendar {
+            height: 450px;
+        }
         #calendar .fc-header-toolbar {
             display: block;
         }

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+
         headerToolbar: {
             left: 'prev,next today',
             center: 'title',
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         businessHours: true, // display business hours
         // editable: true,
         // selectable: true,
+        locale: 'es',
         events: [{
             title: 'Piura',
             start: '2021-03-08',
