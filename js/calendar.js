@@ -16,9 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // selectable: true,
         locale: 'es',
         events: [{
-            title: 'Piura',
+            title: 'Piura - Oracio Navarro',
             start: '2021-03-08',
-            end: '2021-03-08'
+            end: '2021-03-08',
+            // window.location.href = 'http://www.google.com'
+            url: 'clientes-pago.html'
         }, {
             title: 'Sechura',
             start: '2021-03-20',
@@ -31,8 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
             color: '#011455'
         }, {
             title: 'La Union',
-            start: '2021-03-08',
-            end: '2021-03-08',
+            start: '2021-03-18',
+            end: '2021-03-18',
             color: '#ff9f89'
         }, {
             title: 'Colan',
