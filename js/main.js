@@ -32,7 +32,15 @@ $('.menu_link').on('click', function() {
     $('.menu_link').removeClass('active');
     $(this).addClass('active');
 });
-
+// menu collapse
+$('.collap').on('click', function() {
+    $('.collapse__menu').toggleClass("show");
+    $('.flecha').toggleClass("rotate");
+});
+$('.collap_cli').on('click', function() {
+    $('.collapse__menu__cliente').toggleClass("show");
+    $('.flecha-c').toggleClass("rotate");
+});
 // mapa antenas
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWxvbnNvYWxhbWEiLCJhIjoiY2tsa2h4eGd4MDFqZjJvbnp6MndtNjFjMyJ9.C016LuwWfitjB2p6PCuQAQ'; // replace this with your access token
 var map = new mapboxgl.Map({
@@ -103,20 +111,3 @@ new Chart(document.getElementById("myLineChart"), {
         // }
     }
 });
-
-
-/*===== COLLAPSE MENU  =====*/
-const linkCollapse = document.getElementsByClassName('collap')
-var i
-
-for (i = 0; i < linkCollapse.length; i++) {
-    linkCollapse[i].addEventListener('click', function() {
-        const collapseMenu = this.nextElementSibling
-        collapseMenu.classList.toggle('showCollapse')
-            // const rotate = document.getElementsByClassName('flecha')
-            // $(rotate).addClass('rotate');
-
-        $(this).find('.flecha').toggleClass('rotate');
-    })
-
-}

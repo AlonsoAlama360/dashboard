@@ -15,6 +15,9 @@
     <!-- DataTable -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
     <link rel="stylesheet" href="plugins/datatables.net-bs/css/responsive.bootstrap.min.css">
+    <!-- Calendar -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.css"> -->
+    <link rel="stylesheet" href="plugins/fullcalendar/main.css">
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <title>Intralink</title>
@@ -31,7 +34,7 @@
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="index.html" class="menu_link ">
+                    <a href="index.html" class="menu_link">
                         <span><i class="fas fa-home"></i></span><span>Inicio</span>
                     </a>
                 </li>
@@ -41,49 +44,55 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="menu_link ">
+                    <a href="#" class="menu_link">
                         <span><i class="fab fa-product-hunt"></i></span><span>Productos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="menu_link ">
+                    <a href="#" class="menu_link">
                         <span><i class="fas fa-tools"></i></span><span>Servicios</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="menu_link ">
-                        <span><i class="fas fa-users"></i></span><span>Clientes</span>
+                    <a href="#" class="collap_cli menu_link">
+                        <span class="collap"><i class="fa fa-users" aria-hidden="true"></i></span><span>Cliente</span>
+                        <i class="fas fa-angle-down flecha-c collapse__link"></i>
                     </a>
+
+                    <ul class="collapse__menu__cliente">
+                        <a href="#" class="">Crear Cliente</a>
+                        <a href="#" class="">Clientes Morosos</a>
+                    </ul>
                 </li>
-                <li class="collapse">
-                    <a href="#" class="menu_link collap">
-                        <span class="collap"></span><i class="fas fa-list-ul"></i></span><span>Ventas</span>
+                <li>
+                    <a href="#" class="collap menu_link">
+                        <span class="collap"><i class="fas fa-list-ul"></i></span><span>Ventas</span>
                         <i class="fas fa-angle-down flecha collapse__link"></i>
                     </a>
 
                     <ul class="collapse__menu">
-                        <a href="#" class="collapse__sublink">Crear Venta</a>
-                        <a href="#" class="collapse__sublink">Administrar Venta</a>
-                        <a href="#" class="collapse__sublink">Reporte de venta</a>
+                        <a href="#" class="">Crear Venta</a>
+                        <a href="#" class="">Administrar Venta</a>
+                        <a href="#" class="">Reporte de venta</a>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="menu_link ">
+                    <a href="#" class="menu_link">
                         <span><i class="fas fa-clipboard-list"></i></span><span>Solicitudes</span>
                     </a>
                 </li>
                 <li>
-                    <a href="calendar.html" class="menu_link ">
+                    <a href="calendar.html" class="menu_link">
                         <span><i class="fas fa-calendar-alt"></i></span><span>Calendario</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="menu_link ">
+                    <a href="#" class="menu_link">
                         <span><i class="fas fa-chart-pie"></i></span><span>Reportes</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="menu_link ">
+                    <a href="#" class="menu_link">
                         <span><i class="fas fa-power-off"></i></span><span>Salir</span>
                     </a>
                 </li>
@@ -133,10 +142,13 @@
                                 <thead>
                                     <tr>
                                         <th style="width:10px">#</th>
+                                        <th>DNI</th>
                                         <th>Nombre</th>
                                         <th>Usuario</th>
                                         <th>Foto</th>
                                         <th>Perfil</th>
+                                        <th>Ruta</th>
+                                        <th>Fecha Inicio</th>
                                         <th>Estado</th>
                                         <th>Último login</th>
                                         <th>Acciones</th>
@@ -145,12 +157,15 @@
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td> Administrador</td>
-                                        <td>admin</td>
+                                        <td>98351723</td>
+                                        <td>Julio Zapata</td>
+                                        <td>julioZ</td>
                                         <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
-                                        <td>Administrador</td>
+                                        <td>Cobrador</td>
+                                        <td>Piura</td>
+                                        <td>2021-03-11</td>
                                         <td><button class="success">Activado</button></td>
-                                        <td>2017-12-11 12:05:32</td>
+                                        <td>2021-03-11 12:05:32</td>
                                         <td>
                                             <div class="btn-group">
                                                 <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarUsuario"><i class="fas fa-pencil-alt"></i></button>
@@ -160,12 +175,15 @@
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>José Conor</td>
-                                        <td>admin</td>
+                                        <td>43681723</td>
+                                        <td>Juan Bereche</td>
+                                        <td>juanB</td>
                                         <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
-                                        <td>Administrador</td>
-                                        <td><button class="danger">Desactivado</button></td>
-                                        <td>2017-12-11 12:05:32</td>
+                                        <td>Cobrador</td>
+                                        <td>Paita</td>
+                                        <td>2021-03-11</td>
+                                        <td><button class="success">Activado</button></td>
+                                        <td>2021-03-11 12:05:32</td>
                                         <td>
                                             <div class="btn-group">
                                                 <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarUsuario"><i class="fas fa-pencil-alt"></i></button>
@@ -175,12 +193,15 @@
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <td> Oracio Navarro</td>
-                                        <td>admin</td>
+                                        <td>58281723</td>
+                                        <td>Ana Sanchez</td>
+                                        <td>anaS</td>
                                         <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
-                                        <td>Administrador</td>
+                                        <td>Cobrador</td>
+                                        <td>Colán</td>
+                                        <td>2021-03-11</td>
                                         <td><button class="success">Activado</button></td>
-                                        <td>2017-12-11 12:05:32</td>
+                                        <td>2021-03-11 12:05:32</td>
                                         <td>
                                             <div class="btn-group">
                                                 <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarUsuario"><i class="fas fa-pencil-alt"></i></button>
@@ -190,12 +211,15 @@
                                     </tr>
                                     <tr>
                                         <td>4</td>
-                                        <td> Judas Chavez</td>
-                                        <td>admin</td>
+                                        <td>67431723</td>
+                                        <td>Judas Tadeo</td>
+                                        <td>judasT</td>
                                         <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
-                                        <td>Administrador</td>
-                                        <td><button class="danger">Desactivado</button></td>
-                                        <td>2017-12-11 12:05:32</td>
+                                        <td>Cobrador</td>
+                                        <td>Catacaos</td>
+                                        <td>2021-03-11</td>
+                                        <td><button class="success">Activado</button></td>
+                                        <td>2021-03-11 12:05:32</td>
                                         <td>
                                             <div class="btn-group">
                                                 <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarUsuario"><i class="fas fa-pencil-alt"></i></button>
@@ -205,117 +229,15 @@
                                     </tr>
                                     <tr>
                                         <td>5</td>
-                                        <td> Pedro Mendez</td>
-                                        <td>admin</td>
+                                        <td>17832780</td>
+                                        <td>Tomas Aguilar</td>
+                                        <td>tomasA</td>
                                         <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
-                                        <td>Administrador</td>
+                                        <td>Cobrador</td>
+                                        <td>La unión</td>
+                                        <td>2021-03-11</td>
                                         <td><button class="success">Activado</button></td>
-                                        <td>2017-12-11 12:05:32</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarUsuario"><i class="fas fa-pencil-alt"></i></button>
-                                                <button class="delete"><i class="fa fa-times" aria-hidden="true"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Josue Juarez</td>
-                                        <td>admin</td>
-                                        <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
-                                        <td>Administrador</td>
-                                        <td><button class="success">Activado</button></td>
-                                        <td>2017-12-11 12:05:32</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarUsuario"><i class="fas fa-pencil-alt"></i></button>
-                                                <button class="delete"><i class="fa fa-times" aria-hidden="true"></i></button>
-                                            </div>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>Juan Perez</td>
-                                        <td>admin</td>
-                                        <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
-                                        <td>Administrador</td>
-                                        <td><button class="danger">Desactivado</button></td>
-                                        <td>2017-12-11 12:05:32</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarUsuario"><i class="fas fa-pencil-alt"></i></button>
-                                                <button class="delete"><i class="fa fa-times" aria-hidden="true"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>Juan Perez</td>
-                                        <td>admin</td>
-                                        <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
-                                        <td>Administrador</td>
-                                        <td><button class="danger">Desactivado</button></td>
-                                        <td>2017-12-11 12:05:32</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarUsuario"><i class="fas fa-pencil-alt"></i></button>
-                                                <button class="delete"><i class="fa fa-times" aria-hidden="true"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>Juan Perez</td>
-                                        <td>admin</td>
-                                        <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
-                                        <td>Administrador</td>
-                                        <td><button class="danger">Desactivado</button></td>
-                                        <td>2017-12-11 12:05:32</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarUsuario"><i class="fas fa-pencil-alt"></i></button>
-                                                <button class="delete"><i class="fa fa-times" aria-hidden="true"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>Juan Perez</td>
-                                        <td>admin</td>
-                                        <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
-                                        <td>Administrador</td>
-                                        <td><button class="danger">Desactivado</button></td>
-                                        <td>2017-12-11 12:05:32</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarUsuario"><i class="fas fa-pencil-alt"></i></button>
-                                                <button class="delete"><i class="fa fa-times" aria-hidden="true"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>11</td>
-                                        <td>Juan Perez</td>
-                                        <td>admin</td>
-                                        <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
-                                        <td>Administrador</td>
-                                        <td><button class="danger">Desactivado</button></td>
-                                        <td>2017-12-11 12:05:32</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarUsuario"><i class="fas fa-pencil-alt"></i></button>
-                                                <button class="delete"><i class="fa fa-times" aria-hidden="true"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>12</td>
-                                        <td>Juan Perez</td>
-                                        <td>admin</td>
-                                        <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
-                                        <td>Administrador</td>
-                                        <td><button class="danger">Desactivado</button></td>
-                                        <td>2017-12-11 12:05:32</td>
+                                        <td>2021-03-11 12:05:32</td>
                                         <td>
                                             <div class="btn-group">
                                                 <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarUsuario"><i class="fas fa-pencil-alt"></i></button>
@@ -422,12 +344,16 @@
             </div>
         </div>
     </div>
-    <script src="plugins/jquery-3.5.1.min.js"></script>
+
+    <!-- JQUERY -->
+    <script src="js/jquery-3.5.1.min.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- DATATABLE -->
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
     <script src="plugins/datatables.net-bs/js/dataTables.responsive.min.js"></script>
     <script src="plugins/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
+    <!-- CHART JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <!-- Calendar -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.js"></script> -->
