@@ -61,7 +61,7 @@
 
                     <ul class="collapse__menu__cliente">
                         <a href="#" class="">Crear Cliente</a>
-                        <a href="#" class="">Clientes Morosos</a>
+                        <a href="deudores.html" class="">Clientes Morosos</a>
                     </ul>
                 </li>
                 <li>
@@ -143,6 +143,7 @@
                                         <th>Nombre</th>
                                         <th>Dirección</th>
                                         <th>Fecha</th>
+                                        <th>Metodo Pago</th>
                                         <th>Servicio</th>
                                         <th>Equipos</th>
                                         <th>Deuda</th>
@@ -156,6 +157,7 @@
                                         <td>Teodoro Días</td>
                                         <td>Piura - Cusco #456</td>
                                         <td>10-01-2020</td>
+                                        <td>Yape</td>
                                         <td>S/. 50.00</td>
                                         <td>S/. 10.00</td>
                                         <td><small>NO - DEUDA</small></td>
@@ -175,6 +177,7 @@
                                         <td>Teodoro Días</td>
                                         <td>Piura - Cusco #456</td>
                                         <td>10-02-2020</td>
+                                        <td>Efectivo</td>
                                         <td>S/. 50.00</td>
                                         <td>S/. 10.00</td>
                                         <td>S/. 50.00</td>
@@ -194,6 +197,7 @@
                                         <td>Teodoro Días</td>
                                         <td>Piura - Cusco #456</td>
                                         <td>10-03-2020</td>
+                                        <td>Efectivo</td>
                                         <td>S/. 50.00</td>
                                         <td>S/. 10.00</td>
                                         <td>S/. 50.00 </td>
@@ -240,6 +244,15 @@
                         <div class="col-md-6">
                             <label for="fecha" class="form-label ">Fecha</label>
                             <input type="date " class="form-control " id="fecha" value="10-01-2020" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="metodoP" class="form-label">Metodo de pago</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option value="1" selected>Efectivo</option>
+                                <option value="2">Deposito</option>
+                                <option value="3">Transferencia</option>
+                                <option value="4">Yape</option>
+                              </select>
                         </div>
                         <div class="col-md-4">
                             <label for="fecha" class="form-label ">Servicio</label>
