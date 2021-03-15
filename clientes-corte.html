@@ -133,12 +133,9 @@
 
         </section> -->
         <main>
-            <h2 class="text-dark pb-3">Clientes</h2>
+            <h2 class="text-dark pb-3">Clientes por corte</h2>
             <section class="content">
                 <div class="box">
-                    <div class="box-header ">
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#AgregarUsuario">Agregar cliente</button>
-                    </div>
                     <div class="box-body">
                         <div class="">
                             <table width="100%" class="dt-responsive tablas">
@@ -146,9 +143,11 @@
                                     <tr>
                                         <th style="width:10px">#</th>
                                         <th>Nombre</th>
-                                        <th>Foto</th>
                                         <th>Dirección</th>
                                         <th>Equipos</th>
+                                        <th>Motivo</th>
+                                        <th>Retiro de equipos</th>
+                                        <th>Deuda</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
@@ -156,45 +155,51 @@
                                     <tr>
                                         <td>1</td>
                                         <td> Teodoro Días</td>
-                                        <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
                                         <td>Piura - Cusco #456</td>
                                         <td>Alquiler</td>
+                                        <td>Moroso</td>
+                                        <td> <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked></td>
+                                        <td>S/. 100.00</td>
                                         <td>
                                             <div class="btn-group">
                                                 <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarCliente"><i class="fas fa-pencil-alt"></i></button>
                                                 <button class="delete"><i class="fa fa-times" aria-hidden="true"></i></button>
                                                 <button class="estado-P deuda mr-5" data-bs-toggle="modal" data-bs-target="#Deuda"><i class="fas fa-circle"></i></button>
-                                                <button class="b-n" data-bs-toggle="modal" data-bs-target="#DarBaja"><i class="fas fa-user-times"></i></button>
+                                                <button class="b-n"><i class="fas fa-long-arrow-alt-right"></i></button>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td> Juan De la torre</td>
-                                        <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
                                         <td>Piura - Junin #06</td>
-                                        <td>Compra</td>
+                                        <td>Alquiler</td>
+                                        <td>Golpeo al cobrador</td>
+                                        <td><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."></td>
+                                        <td><small>NO - DEUDA</small></td>
                                         <td>
                                             <div class="btn-group">
                                                 <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarCliente"><i class="fas fa-pencil-alt"></i></button>
                                                 <button class="delete"><i class="fa fa-times" aria-hidden="true"></i></button>
                                                 <button class="no-deuda estado-P"><i class="fas fa-circle"></i></button>
-                                                <button class="b-n" data-bs-toggle="modal" data-bs-target="#DarBaja"><i class="fas fa-user-times"></i></button>
+                                                <button class="b-n" data-bs-toggle="modal" data-bs-target="#RetiroEquipos"><i class="fas fa-long-arrow-alt-right"></i></button>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>Francisco Cisco</td>
-                                        <td><img src="img/2.jpg" class="img-thumbnail" width="40px"></td>
                                         <td>Piura - Lima #04</td>
-                                        <td>Compra</td>
+                                        <td>Alquiler</td>
+                                        <td>Moroso</td>
+                                        <td><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."></td>
+                                        <td>S/. 100.00</td>
                                         <td>
                                             <div class="btn-group">
                                                 <button class="editar" data-bs-toggle="modal" data-bs-target="#EditarCliente"><i class="fas fa-pencil-alt"></i></button>
                                                 <button class="delete"><i class="fa fa-times" aria-hidden="true"></i></button>
-                                                <button class="estado-P no-deuda"><i class="fas fa-circle"></i></button>
-                                                <button class="b-n" data-bs-toggle="modal" data-bs-target="#DarBaja"><i class="fas fa-user-times"></i></button>
+                                                <button class="estado-P deuda mr-5" data-bs-toggle="modal" data-bs-target="#Deuda"><i class="fas fa-circle"></i></button>
+                                                <button class="b-n" data-bs-toggle="modal" data-bs-target="#RetiroEquipos"><i class="fas fa-long-arrow-alt-right"></i></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -209,86 +214,7 @@
             <strong>Copyright &copy; 2021 <a href="#" >IntraLink</a>.</strong> Todos los derechos reservados.
         </footer>
     </div>
-    <!-- MODAL AGREGAR CLIENTE -->
-    <div class="modal fade" id="AgregarUsuario" tabindex="-1" aria-labelledby="AgregarUsuario" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header ">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar Cliente</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" placeholder="Ingresar nombre" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker-alt"></i></span>
-                        <input type="text" class="form-control" placeholder="Ingresar dirección" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-briefcase"></i></span>
-                        <select class="form-select" id="inputGroupSelect01">
-                            <option selected disabled>Seleccionar Equipos</option>
-                            <option value="1">Alquiler</option>
-                            <option value="2">Compra</option>
-                          </select>
-                    </div>
 
-                    <div class="form-group">
-                        <div class="panel">SUBIR FOTO</div>
-                        <input type="file" class="form-control mt-2" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
-                        <p class="help-block">Peso máximo de la foto 200 MB</p>
-                        <img src="img/2.jpg" class=" img-user " width="100px ">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary pull-left" data-bs-dismiss="modal">Salir</button>
-                    <button type="button" class="">Guardar cliente</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL EDITAR CLIENTE -->
-    <div class="modal fade" id="EditarCliente" tabindex="-1" aria-labelledby="EditarCliente" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header ">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar Cliente</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" value="Teodoro Días" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker-alt"></i></span>
-                        <input type="text" class="form-control" value="Piura - Cusco #456" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-briefcase"></i></span>
-                        <select class="form-select" id="inputGroupSelect01">
-                            <option  disabled>Seleccionar Equipos</option>
-                            <option selected value="1">Alquiler</option>
-                            <option value="2">Compra</option>
-                          </select>
-                    </div>
-                    <div class="form-group">
-                        <div class="panel">SUBIR FOTO</div>
-                        <input type="file" class="form-control mt-2" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
-                        <p class="help-block">Peso máximo de la foto 200 MB</p>
-                        <img src="img/2.jpg" class=" img-user " width="100px ">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary pull-left" data-bs-dismiss="modal">Salir</button>
-                    <button type="button" class="">Editar Cliente</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- MODAL DEUDA-->
     <div class="modal" id="Deuda" tabindex="-1" aria-labelledby="Deuda" aria-hidden="true">
@@ -352,26 +278,49 @@
             </div>
         </div>
     </div>
-    <!-- MODAL CLIENTE BAJA-->
-    <div class="modal" id="DarBaja" tabindex="-1" aria-labelledby="DarBaja" aria-hidden="true">
+    <!-- MODAL RETIRO DE EQUIPOS-->
+    <div class="modal" id="RetiroEquipos" tabindex="-1" aria-labelledby="RetiroEquipos" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header ">
-                    <h5 class="modal-title" id="exampleModalLabel">Dar Baja a Cliente</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Retiro de equipos</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form class="row g-3">
+                        <div class="col-md-12">
+                            <label for="monto" class="form-label">Equipos</label>
+                            <div class="form-check ">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Antena Litebeam-m5-23
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                  Cable  30m CAT6
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                 Router Tenda 3 Antenas
+                                </label>
+                            </div>
+                        </div>
                         <div class="mb-3">
-                            <label for="observaciones" class="form-label">Motivo</label>
+                            <label for="observaciones" class="form-label">Obseración</label>
                             <textarea class="form-control" id="observaciones" rows="3"></textarea>
                         </div>
+                        <p class="mb-0">Monto a cobrar: <small>S/. 50.00</small></p>
+                        <p class="">Responsable: <small>Abel Caramantin</small></p>
                     </form>
                 </div>
                 <div class=" modal-footer ">
-                    <button type="button " class="" data-bs-dismiss="modal">Dar Baja</button>
+                    <button type="button " class="btn btn-secondary" data-bs-dismiss="modal">Registrar</button>
                     <!-- <button type="button " class="btn-primary">Generar comprobante</button> -->
-                    <button type="button" class="btn btn-secondary pull-left" data-bs-dismiss="modal">Salir</button>
+                    <button type="button " class="btn-success">Pagar</button>
                 </div>
             </div>
         </div>

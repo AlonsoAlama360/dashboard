@@ -406,7 +406,8 @@ tr td:last-child {
     align-items: center;
 }
 
-.status.success {
+.status.success,
+.no-deuda {
     background: green;
 }
 
@@ -983,7 +984,7 @@ canvas {
     color: var(--main-color);
     font-size: 20px;
     padding: 2px;
-    margin: 0;
+    margin-left: 10px;
     text-decoration: none;
 }
 
